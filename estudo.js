@@ -36,6 +36,15 @@ function total(){
     let valor = document.getElementById("val").value;
     let juros = document.getElementById("ju").value;
     let mes = document.getElementById("mes").value;
+   
+   
+   if(!Number (val)){
+       alert("O valor deve ser um número.");
+       document.getElementById("valor"). value = "";
+       document.getElementById("valor"). focus();
+       return
+   }
+   
     let resultado = 0;
     for(let i = 1; i <= mes; i++){
         resultado = valor * (1+(juros/100));
@@ -52,6 +61,17 @@ function soma(){
     let n4 = document.getElementById("b4").value;
     let r = Number(n1) + Number(n2) + Number(n3) + Number(n4);
     document.getElementById("resultado").innerHTML = r;
+    if(!Number (val)){
+        alert("O valor deve ser um número.");
+        document.getElementById("valor"). value = "";
+        document.getElementById("valor"). focus();
+        return
+    }
+
+
+
+
+
 }
 
 function Média(){
@@ -61,7 +81,15 @@ function Média(){
     let n4 = document.getElementById("b4").value;
     let r = (Number(n1) + Number(n2) + Number(n3) + Number(n4))/4;
     document.getElementById("resultado").innerHTML = r;
+    if(!Number (val)){
+        alert("O valor deve ser um número.");
+        document.getElementById("valor"). value = "";
+        document.getElementById("valor"). focus();
+        return
+    }
+
 }
+
 
 function necessário(){
     let n1 = document.getElementById("b1").value;
@@ -70,4 +98,11 @@ function necessário(){
     let n4 = document.getElementById("b4").value;
     let r = 240 - (Number(n1) + Number(n2) + Number(n3) + Number(n4));
     document.getElementById("resultado").innerHTML = r;
+    if(!Number (val)){
+        alert("O valor deve ser um número.");
+        document.getElementById("valor"). value = "";
+        document.getElementById("valor"). focus();
+        return
+    }
+
 }
